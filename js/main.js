@@ -48,14 +48,14 @@ function button_remove(indice,tagli){
 function TocaSomMoeda(){
 
     let somMoeda = document.getElementById('audio')
-    somMoeda.preload = 'auto';
+    somMoeda.preload = 'auto'
     somMoeda.play()
 }
 
 function TocaSomEnviar(){
 
     let audio_enviar = document.getElementById('enviar')
-    audio_enviar.preload = 'auto';
+    audio_enviar.preload = 'auto'
     audio_enviar.play()
 }
 
@@ -65,7 +65,7 @@ button_add.addEventListener("click", () =>{
 
     if (!isTextValid(texto)){
         
-        alert(' inválido')
+        alert(' Conteúdo vazio ou inválido!')
 
     }else{
         
@@ -76,7 +76,7 @@ button_add.addEventListener("click", () =>{
 
         let ul_listaTarefas = document.getElementById('lista_tarefas')
 
-        ul_listaTarefas.style.listStyleType = 'none';
+        ul_listaTarefas.style.listStyleType = 'none'
   
         let tagli = document.createElement('li')
         tagli.style.marginTop = '8px'
@@ -87,7 +87,7 @@ button_add.addEventListener("click", () =>{
        
 
             tagli.textContent = ` ✅  ${item.charAt(0).toUpperCase() + item.slice(1).toLowerCase()}            `
-            tagli.appendChild(button_remove(indice,tagli)); 
+            tagli.appendChild(button_remove(indice,tagli))
 
             ul_listaTarefas.appendChild(tagli)    
     });
